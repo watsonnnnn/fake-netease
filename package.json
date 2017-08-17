@@ -42,6 +42,7 @@
     "react-router-dom": "^4.1.2",
     "redux": "^3.7.2",
     "style-loader": "0.18.2",
+    "svg-sprite-loader": "0.3.1",
     "sw-precache-webpack-plugin": "0.11.4",
     "url-loader": "0.5.9",
     "webpack": "3.5.1",
@@ -106,7 +107,6 @@
     "postcss-pxtorem": "^4.0.1",
     "redux-logger": "^3.0.6",
     "redux-saga": "^0.15.6",
-    "redux-thunk": "^2.2.0",
-    "svg-sprite-loader": "^0.3.1"
+    "redux-thunk": "^2.2.0"
   }
 }

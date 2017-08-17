@@ -14,7 +14,7 @@ export default hoc(
             hidden={state.hidden}
         >
             <TabBar.Item
-                icon={<Icon type="koubei-o" size="md" />}
+                icon={<div className="tabbar-1"/>}
                 selectedIcon={<Icon type="koubei" size="md" />}
                 title="发现音乐"
                 key="tab1"

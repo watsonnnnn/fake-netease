@@ -6402,7 +6402,7 @@ supports-color@^4.0.0, supports-color@^4.2.0, supports-color@^4.2.1:
   dependencies:
     has-flag "^2.0.0"
 
-svg-sprite-loader@^0.3.1:
+svg-sprite-loader@0.3.1:
   version "0.3.1"
   resolved "http://registry.npm.taobao.org/svg-sprite-loader/download/svg-sprite-loader-0.3.1.tgz#44b22c7724bc77256c306b1796257ae6efee515a"
   dependencies:

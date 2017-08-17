@@ -6,8 +6,13 @@
 import {Tabs, Flex} from 'antd-mobile';
 import React from 'react'
 import hoc from '../redux/wrapcomponent'
-import NetCarousel from './firsttabcarousel'
-import RecommendList from './recommendList'
+import NetCarousel from './recommendtab/firsttabcarousel'
+import RecommendList from './recommendtab/recommendList'
+import ExclusiveSend from './recommendtab/exclusiveSend'
+import BroadcastTV from './recommendtab/broadcastTV'
+import EspeciaColumn from './recommendtab/especiaColumn'
+import LastestMusic from './recommendtab/lastestMusic'
+import RecommendMV from './recommendtab/recommendMV'
 const TabPane = Tabs.TabPane
 
 function callback(key) {
@@ -38,6 +43,11 @@ const DiscoveryTabs = ({actions, state}) => {
                 </div>
                 <hr/>
                 <RecommendList/>
+                <ExclusiveSend/>
+                <LastestMusic/>
+                <RecommendMV/>
+                <EspeciaColumn/>
+                <BroadcastTV/>
             </TabPane>
             <TabPane tab='歌单' key="2">
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '3rem', backgroundColor: '#fff' }}>
