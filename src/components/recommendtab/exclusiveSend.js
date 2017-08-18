@@ -7,7 +7,7 @@ import React, {Component} from 'react'
 import hoc from '../../redux/wrapcomponent'
 
 //独家放送
-@hoc
+// @hoc
 class ExclusiveSend extends Component {
     state = {
         list : [1,2,3,4,5,6]

@@ -7,7 +7,7 @@ import React, {Component} from 'react'
 import hoc from '../../redux/wrapcomponent'
 
 //推荐MV
-@hoc
+@hoc({id: 'recommendMV', url: ''})
 class RecommendMV extends Component {
     state = {
         list : [1,2,3,4,5,6]

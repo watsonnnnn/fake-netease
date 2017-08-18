@@ -7,7 +7,7 @@ import React, {Component} from 'react'
 import hoc from '../../redux/wrapcomponent'
 
 //精选专栏
-@hoc
+// @hoc
 class EspecialColumn extends Component {
     state = {
         list : [1,2,3,4,5,6]

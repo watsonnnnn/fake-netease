@@ -68,4 +68,4 @@ const DiscoveryTabs = ({actions, state}) => {
     </div>)
 }
 
-export default hoc(DiscoveryTabs)
+export default DiscoveryTabs

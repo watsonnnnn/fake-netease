@@ -7,14 +7,15 @@ import {SearchBar} from 'antd-mobile';
 import React from 'react'
 import hoc from '../redux/wrapcomponent'
 
-
-const TopSearch = ({actions, state}) => {
-    return (<div>
-        <div className="topsearch">
-            <SearchBar placeholder="搜索音乐、歌词、电台" autoFocus/>
-        </div>
-    </div>)
+@hoc({id: 'topSearch'})
+class TopSearch extends React.Component{
+    render(){
+        return (<div>
+            <div className="topsearch">
+                <SearchBar placeholder="搜索音乐、歌词、电台" autoFocus/>
+            </div>
+        </div>)
+    }
 }
-
-export default hoc(TopSearch)
+export default TopSearch
 

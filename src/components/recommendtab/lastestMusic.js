@@ -7,7 +7,7 @@ import React, {Component} from 'react'
 import hoc from '../../redux/wrapcomponent'
 
 //最新音乐
-@hoc
+@hoc({id: 'lastestMusic', url: ''})
 class LastestMusic extends Component {
     state = {
         list : [1,2,3,4,5,6]

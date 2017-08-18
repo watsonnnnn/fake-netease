@@ -7,7 +7,7 @@ import React, {Component} from 'react'
 import hoc from '../../redux/wrapcomponent'
 
 //主播电台
-@hoc
+// @hoc
 class BroadcastTV extends Component {
     state = {
         list : [1,2,3,4,5,6]
