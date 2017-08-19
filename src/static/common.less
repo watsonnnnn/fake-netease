@@ -1,3 +1,21 @@
+@font-face {
+  font-family: "iconfont";
+  src: url('//at.alicdn.com/t/font_390140_6omw0lunc9l1h5mi.eot?t=1503126523977'); /* IE9*/
+  src: url('//at.alicdn.com/t/font_390140_6omw0lunc9l1h5mi.eot?t=1503126523977#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('//at.alicdn.com/t/font_390140_6omw0lunc9l1h5mi.woff?t=1503126523977') format('woff'), /* chrome, firefox */ url('//at.alicdn.com/t/font_390140_6omw0lunc9l1h5mi.ttf?t=1503126523977') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('//at.alicdn.com/t/font_390140_6omw0lunc9l1h5mi.svg?t=1503126523977#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-wangyiyunyinlezizhi-copy:before {
+  content: "\e601";
+}
+
 @neteaseColor: #d43c33;
 .topsearch {
   background: @neteaseColor;
@@ -5,28 +23,31 @@
   .am-search-cancel {
     color: #f5f5f5
   }
-  .am-search{
+  .am-search {
     background-color: inherit;
   }
 }
-.discoverytab{
-  .am-tabs-bar .am-tabs-tab-active{
+
+.discoverytab {
+  .am-tabs-bar .am-tabs-tab-active {
     color: @neteaseColor;
   }
-  .am-tabs-ink-bar{
+  .am-tabs-ink-bar {
     background: @neteaseColor;
   }
-  hr{
+  hr {
     box-sizing: border-box;
     margin: 0;
   }
 }
+
 .my-carousel {
   background: #fff;
   a {
     display: inline-block;
     width: 100%;
-    margin: 0; padding: 0;
+    margin: 0;
+    padding: 0;
     img {
       width: 100%;
       vertical-align: top;
@@ -38,15 +59,16 @@
     padding-left: 0.2rem;
   }
 }
-.discovery-choose{
+
+.discovery-choose {
   display: flex;
-  >div{
+  > div {
     text-align: center;
-    flex:1;
+    flex: 1;
     background: #fff;
     padding-top: 0.1rem;
   }
-  a{
+  a {
     background: url("./images/sirenfm.png") no-repeat;
     display: inline-block;
     text-align: center;
@@ -57,29 +79,30 @@
     //vertical-align: middle;
     //background-size: 50% 50%;
   }
-  span{
+  span {
     font-size: 0.26rem;
     display: block;
     margin: .1rem 0;
   }
-  .a2{
+  .a2 {
     background: url("./images/gequtuijian.jpg") no-repeat;
   }
-  .a3{
+  .a3 {
     background: url("./images/rege.jpg") no-repeat;
   }
 }
-.recommendList{
-  p.recommendListTitle{
+
+.recommendList {
+  p.recommendListTitle {
     margin: 0.3rem 0;
     letter-spacing: 0.02rem;
     border-left: 0.06rem solid @neteaseColor;
     padding-left: 0.2rem;
   }
-  .recommendListpic{
+  .recommendListpic {
     width: 100%;
     //margin-left: 5%;
-    .recommendListItem{
+    .recommendListItem {
       display: inline-block;
       background: #ccc;
       margin-right: 0.08rem;
@@ -90,8 +113,59 @@
   }
 }
 
-.tabbar-1{
+.tabbar-1 {
+  background: url('./images/netease.png') center center;
+}
+
+.tabbar-1-active {
+  background: url('images/netease-active.png') center center;
+}
+
+.tabbar-2 {
+  background: url('./images/音乐.png') center center;
+}
+
+.tabbar-2-active {
+  background: url('images/音乐active.png') center center;
+}
+
+.tabbar-3 {
+  background: url('./images/朋友.png') center center;
+}
+
+.tabbar-3-active {
+  background: url('images/朋友active.png') center center;
+}
+
+.tabbar-4 {
+  background: url('images/账号.png') center center;
+}
+
+.tabbar-4-active {
+  background: url('images/账号active.png') center center;
+}
+
+.tabbar-icon {
   width: 0.44rem;
   height: 0.44rem;
-  background: url('./svg/tabfirst.svg') center center ;
+  background-size: 0.44rem;
+}
+
+//*歌单tab*//
+.songlist-pic {
+  height: 3.5rem;
+  background: rgba(136, 136, 136, 0.61);
+  display: flex;
+  .summary {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    .top {
+      margin-bottom: 0.4rem;
+      color: #fff;
+      font-size: 0.4rem;
+      letter-spacing: 2px;
+      font-family: 'DFKai-SB'
+    }
+  }
 }

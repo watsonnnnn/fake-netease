@@ -5,7 +5,7 @@
 
 import {SearchBar} from 'antd-mobile';
 import React from 'react'
-import hoc from '../redux/wrapcomponent'
+import hoc from '../../redux/wrapcomponent'
 
 @hoc({id: 'topSearch'})
 class TopSearch extends React.Component{

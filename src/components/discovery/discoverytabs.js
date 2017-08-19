@@ -3,9 +3,8 @@
  */
 /* @flow */
 
-import {Tabs, Flex} from 'antd-mobile';
+import {Tabs} from 'antd-mobile';
 import React from 'react'
-import hoc from '../redux/wrapcomponent'
 import NetCarousel from './recommendtab/firsttabcarousel'
 import RecommendList from './recommendtab/recommendList'
 import ExclusiveSend from './recommendtab/exclusiveSend'
@@ -13,6 +12,11 @@ import BroadcastTV from './recommendtab/broadcastTV'
 import EspeciaColumn from './recommendtab/especiaColumn'
 import LastestMusic from './recommendtab/lastestMusic'
 import RecommendMV from './recommendtab/recommendMV'
+import MusicType from './recommendtab/musicType'
+
+import SongListHeader from './songlisttab/header'
+import SongListCategory from './songlisttab/category'
+import SongList from './songlisttab/songlist'
 const TabPane = Tabs.TabPane
 
 function callback(key) {
@@ -24,23 +28,10 @@ function handleTabClick(key) {
 
 const DiscoveryTabs = ({actions, state}) => {
     return (<div className="discoverytab">
-        <Tabs defaultActiveKey="1" animated={false} onChange={callback} onTabClick={handleTabClick}>
+        <Tabs defaultActiveKey="2" animated={false} onChange={callback} onTabClick={handleTabClick}>
             <TabPane tab='个性推荐' key="1">
                 <NetCarousel/>
-                <div className="discovery-choose">
-                    <div>
-                        <a></a>
-                        <span >私人FM</span>
-                    </div>
-                    <div>
-                        <a  className="a2" ></a>
-                        <span>每日歌曲推荐</span>
-                    </div>
-                    <div>
-                        <a  className="a3" href="#"></a>
-                        <span>云音乐热搜榜</span>
-                    </div>
-                </div>
+                <MusicType/>
                 <hr/>
                 <RecommendList/>
                 <ExclusiveSend/>
@@ -50,9 +41,9 @@ const DiscoveryTabs = ({actions, state}) => {
                 <BroadcastTV/>
             </TabPane>
             <TabPane tab='歌单' key="2">
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '3rem', backgroundColor: '#fff' }}>
-                    Content of Second Tab
-                </div>
+                <SongListHeader/>
+                <SongListCategory/>
+                <SongList/>
             </TabPane>
             <TabPane tab='主播电台' key="3">
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '3rem', backgroundColor: '#fff' }}>

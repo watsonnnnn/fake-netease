@@ -2,7 +2,7 @@
  * Created by Administrator on 2017/8/11.
  */
 import React from 'react'
-import {Carousel, WingBlank} from 'antd-mobile';
+import {Carousel} from 'antd-mobile';
 
 class NetCarousel extends React.Component {
     state = {
@@ -27,7 +27,7 @@ class NetCarousel extends React.Component {
                     className="my-carousel"
                     autoplay={false}
                     infinite
-                    selectedIndex={1}
+                    selectedIndex={0}
                     swipeSpeed={35}
                     beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
                     afterChange={index => console.log('slide to', index)}
@@ -35,28 +35,28 @@ class NetCarousel extends React.Component {
                     <a href="http://www.baidu.com" style={hProp}>
                         <img
                             style={hProp}
-                            src={require('../../static/images/b1.jpg')}
+                            src={require('../../../static/images/b1.jpg')}
                             alt="icon"
                         />
                     </a>
                     <a href="http://www.baidu.com" style={hProp}>
                         <img
                             style={hProp}
-                            src={require('../../static/images/b2.png')}
+                            src={require('../../../static/images/b2.png')}
                             alt="icon"
                         />
                     </a>
                     <a href="http://www.baidu.com" style={hProp}>
                         <img
                             style={hProp}
-                            src={require('../../static/images/b3.png')}
+                            src={require('../../../static/images/b3.png')}
                             alt="icon"
                         />
                     </a>
                     <a href="http://www.baidu.com" style={hProp}>
                         <img
                             style={hProp}
-                            src={require('../../static/images/b4.jpg')}
+                            src={require('../../../static/images/b4.jpg')}
                             alt="icon"
                         />
                     </a>

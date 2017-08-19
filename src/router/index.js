@@ -1,8 +1,8 @@
 /**
  * Created by Administrator on 2017/8/11.
  */
-import DiscoveryMusic from '../components/discoveryMusic'
-import Tabbar from '../components/tabbar'
+import DiscoveryMusic from '../components/discovery/discoveryMusic'
+import Tabbar from '../components/discovery/tabbar'
 import React from 'react'
 import Test from '../test/test'
 import {

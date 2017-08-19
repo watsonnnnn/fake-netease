@@ -4,7 +4,7 @@
 /* @flow */
 
 import React, {Component} from 'react'
-import hoc from '../../redux/wrapcomponent'
+import hoc from '../../../redux/wrapcomponent'
 
 //主播电台
 // @hoc
