@@ -119,14 +119,14 @@ class Demo extends React.Component {
             );
         };
         return (
+            <div className="songlist">
             <ListView ref="lv"
                       dataSource={this.state.dataSource}
-                      renderHeader={() => <span>header</span>}
                       renderFooter={() => (<div style={{ padding: 30, textAlign: 'center' }}>
                           {this.state.isLoading ? 'Loading...' : 'Loaded'}
                       </div>)}
                       renderRow={row}
-                      renderSeparator={separator}
+                      contentContainerStyle={{justifyContent: 'space-around', flexDirection: 'row', flexWrap: 'wrap'}} 
                       className="am-list"
                       pageSize={4}
                       useBodyScroll
@@ -136,6 +136,7 @@ class Demo extends React.Component {
                       onEndReached={this.onEndReached}
                       onEndReachedThreshold={10}
             />
+            </div>
         );
     }
 }

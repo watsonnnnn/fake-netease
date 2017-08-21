@@ -6,12 +6,12 @@ import {Flex} from 'antd-mobile'
 
 const styles = {
     one: {
-        'vertical-align': 'middle',
+        'verticalAlign': 'middle',
         'height': '.4rem',
     },
     two: {
-        'font-size': '0.25rem',
-        'letter-spacing': '2'
+        'fontSize': '0.25rem',
+        'letterSpacing': 2
     }
 }
 
