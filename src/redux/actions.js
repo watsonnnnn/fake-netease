@@ -13,3 +13,9 @@ export const activeTab = (tab) => {
         currentTab: tab
     }
 }
+export const spreadSongListCategory = (operation) => {// operation: spread展开 collapse收起
+    return {
+        type: 'operateSongListCategory',
+        operation
+    }
+}

@@ -15,3 +15,17 @@ export const currentTab = (state = 'tab1', action) => {
         return state
     }
 }
+
+const SONGLIST_CATEGORY = {
+    currentCategory: '全部歌单',
+    isSonglistCategoryOpened: 'collapse'
+}
+export const songListCategory = (state = SONGLIST_CATEGORY, action) => {
+    switch (action.type) {
+        case 'operateSongListCategory':
+            state.isSonglistCategoryOpened = action.operation
+        default:
+            return state
+        return state
+    }
+}
