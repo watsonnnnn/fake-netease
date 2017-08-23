@@ -15,6 +15,22 @@
 .icon-wangyiyunyinlezizhi-copy:before {
   content: "\e601";
 }
+.clear{
+  overflow: hidden;
+}
+.bgwhite{
+  background: #fff;
+}
+.nolrborder{
+  border-right: none;
+  border-left: none;
+}
+.mt10{
+  margin-top: 0.2rem;
+}
+.mb10{
+  margin-bottom: 0.2rem;
+}
 
 @neteaseColor: #d43c33;
 .topsearch {
@@ -205,3 +221,100 @@
   height: 3.5rem;
   margin-bottom: 0.2rem
 }
+.songcategories{
+  background: #FBF7F7;
+  overflow: auto;
+  position: fixed;
+  z-index: 101;
+  top:0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  .header{
+    height: 1rem;
+    line-height: 1rem;
+    background: #d43c33;
+    text-align: center;
+    padding: 0 0.2rem;
+    color: #f5f5f5;
+    letter-spacing: 2px;
+    a{
+      position: absolute;
+      left: 0.2rem;
+      font-weight: lighter;
+    }
+    span{
+      font-size: 0.36rem;
+    }
+  }
+  .allsongs{
+    padding: 0.1rem;
+
+    >div{
+      height: 0.8rem;
+      line-height: 0.8rem;
+      text-align: center;
+      letter-spacing: 2px;
+      border: 1px solid #d43c33;
+    }
+  }
+  table,td{
+    border: 1px solid #ccc
+  }
+  td{
+    padding: 0.2rem;
+    text-align: center;
+    font-size: 0.28rem;
+  }
+  table{
+    border-collapse: collapse;
+  }
+}
+.showcategory-enter{
+  opacity: 0.01;
+  transform: translateY(100%)
+}
+.showcategory-enter.showcategory-enter-active{
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 300ms linear;
+}
+.showcategory-leave{
+  opacity: 1;
+  transform: translateY(0);
+}
+.showcategory-leave.showcategory-leave-active{
+  opacity: 0.01;
+  transform: translateY(100%);
+  transition: all 300ms linear;
+}
+// .showcategory-appear {
+//   opacity: 0.01;
+// }
+
+// .showcategory-appear.showcategory-appear-active {
+//   opacity: 1;
+//   transition: opacity .5s ease-in;
+// }
+
+//
+.example-enter {
+  opacity: 0.01;
+  transform: translateY(500px)
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 500ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+//

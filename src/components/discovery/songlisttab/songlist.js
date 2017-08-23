@@ -3,6 +3,9 @@
  */
 import React from 'react'
 import { ListView } from 'antd-mobile';
+import SongCategories from './songCategories'
+import hoc from '../../../redux/wrapcomponent'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'; 
 
 const data = [
     {
@@ -26,6 +29,7 @@ let index = data.length - 1;
 const NUM_ROWS = 20;
 let pageIndex = 0;
 
+@hoc({id: 'songListCategory'})
 class Demo extends React.Component {
     constructor(props) {
         super(props);
@@ -120,6 +124,7 @@ class Demo extends React.Component {
         };
         return (
             <div className="songlist">
+            <div className='clear'>
             <ListView ref="lv"
                       dataSource={this.state.dataSource}
                       renderFooter={() => (<div style={{ padding: 30, textAlign: 'center' }}>
@@ -136,6 +141,17 @@ class Demo extends React.Component {
                       onEndReached={this.onEndReached}
                       onEndReachedThreshold={10}
             />
+            </div>
+            <div>
+                <ReactCSSTransitionGroup
+                    transitionName="showcategory"
+                    transitionEnterTimeout={500}
+                    
+                    transitionLeaveTimeout={300}>
+                    {this.props.state.isSonglistCategoryOpened == 'spread' && 
+                    <SongCategories onClick={()=>{this.props.actions.spreadSongListCategory('collapse')}} key='c1'/>}
+                </ReactCSSTransitionGroup>
+            </div>
             </div>
         );
     }

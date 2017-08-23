@@ -23,7 +23,8 @@ const SONGLIST_CATEGORY = {
 export const songListCategory = (state = SONGLIST_CATEGORY, action) => {
     switch (action.type) {
         case 'operateSongListCategory':
-            state.isSonglistCategoryOpened = action.operation
+            //state.isSonglistCategoryOpened = action.operation 不能直接修改
+            state = {...state, isSonglistCategoryOpened: action.operation}
         default:
             return state
         return state

@@ -26,7 +26,6 @@ const hoc = (newSetting) => {
             render() {
                 // 处理ref 在外层组件中传递一个方法 function getInstance(ref){this.component = ref} 这样最终被包装组件的ref会直接赋值到外层组件中
                 let props = {...this.props}
-                console.log(props)
                 if(typeof props.getInstance == 'function'){
                     props.ref = props.getInstance
                 }

@@ -13,7 +13,8 @@ class Category extends React.Component{
             <div className="category">
                 <Flex style={{height: '1.2rem'}}>
                     <Flex.Item className="category-1">
-                        <span onClick={()=>{this.props.actions.spreadSongListCategory('spread')}}>{this.props.state.currentCategory}
+                        <span onClick={()=>{this.props.actions.spreadSongListCategory('spread');document.body.style.overflow='hidden'}}>
+                            {this.props.state.currentCategory}
                             <Icon type={require('../../../static/svg/arrow_down.svg')} 
                         style={{verticalAlign: 'middle'}}/></span>
                     </Flex.Item>
