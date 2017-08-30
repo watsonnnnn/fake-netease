@@ -15,7 +15,7 @@ class Category extends React.Component{
                     <Flex.Item className="category-1">
                         <span onClick={()=>{this.props.actions.spreadSongListCategory('spread');document.body.style.overflow='hidden'}}>
                             {this.props.state.currentCategory}
-                            <Icon type={require('../../../static/svg/arrow_down.svg')} 
+                            <Icon type={require('static/svg/arrow_down.svg')} 
                         style={{verticalAlign: 'middle'}}/></span>
                     </Flex.Item>
                     <Flex.Item></Flex.Item>

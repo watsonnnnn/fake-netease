@@ -35,28 +35,28 @@ class NetCarousel extends React.Component {
                     <a href="http://www.baidu.com" style={hProp}>
                         <img
                             style={hProp}
-                            src={require('../../../static/images/b1.jpg')}
+                            src={require('static/images/b1.jpg')}
                             alt="icon"
                         />
                     </a>
                     <a href="http://www.baidu.com" style={hProp}>
                         <img
                             style={hProp}
-                            src={require('../../../static/images/b2.png')}
+                            src={require('static/images/b2.png')}
                             alt="icon"
                         />
                     </a>
                     <a href="http://www.baidu.com" style={hProp}>
                         <img
                             style={hProp}
-                            src={require('../../../static/images/b3.png')}
+                            src={require('static/images/b3.png')}
                             alt="icon"
                         />
                     </a>
                     <a href="http://www.baidu.com" style={hProp}>
                         <img
                             style={hProp}
-                            src={require('../../../static/images/b4.jpg')}
+                            src={require('static/images/b4.jpg')}
                             alt="icon"
                         />
                     </a>

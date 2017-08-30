@@ -41,6 +41,7 @@ module.exports = {
         alias: {
 
             'react-native': 'react-native-web',
+            'static': path.resolve(__dirname,'../src/static')
         },
         plugins: [
             new ModuleScopePlugin(paths.appSrc),

@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import {Icon} from 'antd-mobile'
 import './App.css';
-import './static/common.less'
+import 'static/common.less'
 import {Provider} from 'react-redux'
 import store from './redux/store'
 import Route from './router'
