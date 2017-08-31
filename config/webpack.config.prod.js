@@ -58,6 +58,7 @@ module.exports = {
       // Support React Native Web
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
       'react-native': 'react-native-web',
+      'static': path.resolve(__dirname,'../src/static')
     },
     plugins: [
       new ModuleScopePlugin(paths.appSrc, [paths.appPackageJson]),
@@ -148,6 +149,43 @@ module.exports = {
             ),
             // Note: this won't work without `new ExtractTextPlugin()` in `plugins`.
           },
+          {
+            test: /\.(svg)$/i,
+            loader: 'svg-sprite-loader',// version 0.3.1 antmobile指定版本
+            include: [
+                require.resolve('antd-mobile').replace(/warn\.js$/, ''),  // 1. svg files of antd-mobile
+                path.resolve(__dirname, '../src'),  // folder of svg files in your project
+            ]
+        },
+        // Parse less files and modify variables
+        {
+            test: /\.less$/,
+            use: [
+                require.resolve('style-loader'),
+                require.resolve('css-loader'),
+                {
+                    loader: require.resolve('postcss-loader'),
+                    options: {
+                        ident: 'postcss', // https://webpack.js.org/guides/migrating/#complex-options
+                        plugins: () => [
+                            pxtorem({
+                                rootValue: 100,
+                                propWhiteList: [],
+                            }),
+                            autoprefixer({
+                                browsers: ['last 2 versions', 'Firefox ESR', '> 1%', 'ie >= 8', 'iOS >= 8', 'Android >= 4'],
+                            }),
+                        ],
+                    },
+                },
+                {
+                    loader: require.resolve('less-loader'),
+                    options: {
+                        modifyVars: { "@primary-color": "#1DA57A" },
+                    },
+                },
+            ],
+        },
           {
             loader: require.resolve('file-loader'),
             exclude: [/\.js$/, /\.html$/, /\.json$/],
