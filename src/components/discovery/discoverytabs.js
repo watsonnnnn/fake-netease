@@ -5,6 +5,8 @@
 
 import {Tabs} from 'antd-mobile';
 import React from 'react'
+
+// 个性推荐
 import NetCarousel from './recommendtab/firsttabcarousel'
 import RecommendList from './recommendtab/recommendList'
 import ExclusiveSend from './recommendtab/exclusiveSend'
@@ -14,9 +16,16 @@ import LastestMusic from './recommendtab/lastestMusic'
 import RecommendMV from './recommendtab/recommendMV'
 import MusicType from './recommendtab/musicType'
 
+// 歌单
 import SongListHeader from './songlisttab/header'
 import SongListCategory from './songlisttab/category'
 import SongList from './songlisttab/songlist'
+
+// 主播电台
+import AnchorCarousel from './anchortab/tabcarousel'
+import Anchortvs from './anchortab/tvs'
+import Anchorpayjp from './anchortab/payjp'
+
 const TabPane = Tabs.TabPane
 
 function callback(key) {
@@ -46,9 +55,9 @@ const DiscoveryTabs = ({actions, state}) => {
                 <SongList/>
             </TabPane>
             <TabPane tab='主播电台' key="3">
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '3rem', backgroundColor: '#fff' }}>
-                    Content of Third Tab
-                </div>
+                <AnchorCarousel />
+                <Anchortvs />
+                <Anchorpayjp />
             </TabPane>
             <TabPane tab='排行榜' key="4">
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '3rem', backgroundColor: '#fff' }}>
