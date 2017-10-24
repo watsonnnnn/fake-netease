@@ -41,7 +41,8 @@ module.exports = {
         alias: {
 
             'react-native': 'react-native-web',
-            'static': path.resolve(__dirname,'../src/static')
+            'static': path.resolve(__dirname,'../src/static'),
+            'myredux': path.resolve(__dirname, '../src/redux')
         },
         plugins: [
             new ModuleScopePlugin(paths.appSrc),

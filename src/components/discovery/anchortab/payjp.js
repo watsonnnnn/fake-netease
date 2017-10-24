@@ -4,7 +4,7 @@
 /* @flow */
 
 import React, {Component} from 'react'
-import hoc from '../../../redux/wrapcomponent'
+import hoc from 'myredux/wrapcomponent'
 
 //付费精品
 // @hoc
@@ -13,7 +13,7 @@ class PayJP extends Component {
         list : [1,2,3,4,5,6]
     }
     render() {
-        let list = this.state.list.map((item, index) => (<Item index={index} item={item}/>))
+        let list = this.state.list.map((item, index) => (<Item index={index} key={index} item={item}/>))
 
         return (<div className="recommendList anchor-pay" style={{width: '100%'}}>
             <p className="recommendListTitle">付费精品{' '}></p>

@@ -26,6 +26,9 @@ import AnchorCarousel from './anchortab/tabcarousel'
 import Anchortvs from './anchortab/tvs'
 import Anchorpayjp from './anchortab/payjp'
 
+// 排行榜
+import Toplist from './toplist'
+
 const TabPane = Tabs.TabPane
 
 function callback(key) {
@@ -60,9 +63,7 @@ const DiscoveryTabs = ({actions, state}) => {
                 <Anchorpayjp />
             </TabPane>
             <TabPane tab='排行榜' key="4">
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '3rem', backgroundColor: '#fff' }}>
-                    Content of Third Tab
-                </div>
+                <Toplist />
             </TabPane>
         </Tabs>
     </div>)
