@@ -13,15 +13,17 @@ class PayJP extends Component {
         list : [1,2,3,4,5,6]
     }
     render() {
-        let list = this.state.list.map((item, index) => (<Item index={index} key={index} item={item}/>))
+        let list = this.state.list.map((item, index) => (<Item key={index} index={index} item={item}/>))
 
-        return (<div className="recommendList anchor-pay" style={{width: '100%'}}>
+        return (
+        <div className="recommendList anchor-pay" style={{width: '100%'}}>
             <p className="recommendListTitle">付费精品{' '}></p>
             <div className="row-list">
                 {list}
             </div>
             <div style={{height: 46, width: '100%'}}></div>
-        </div>)
+        </div>
+        )
     }
 }
 

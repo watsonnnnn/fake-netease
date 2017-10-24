@@ -41,7 +41,7 @@ function handleTabClick(key) {
 const DiscoveryTabs = ({actions, state}) => {
     return (<div className="discoverytab">
         <Tabs defaultActiveKey="2" animated={false} onChange={callback} onTabClick={handleTabClick}>
-            <TabPane tab='个性推荐' key="1">
+            <TabPane tab='音乐' key="1">
                 <NetCarousel/>
                 <MusicType/>
                 <hr/>
@@ -57,7 +57,7 @@ const DiscoveryTabs = ({actions, state}) => {
                 <SongListCategory/>
                 <SongList/>
             </TabPane>
-            <TabPane tab='主播电台' key="3">
+            <TabPane tab='电台' key="3">
                 <AnchorCarousel />
                 <Anchortvs />
                 <Anchorpayjp />

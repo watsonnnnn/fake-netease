@@ -2,12 +2,16 @@
  * Created by Administrator on 2017/8/11.
  */
 import DiscoveryMusic from '../components/discovery/discoveryMusic'
-import Tabbar from '../components/discovery/tabbar'
+import Tabbar from '../components/tabbar'
 import React from 'react'
 import Test from '../test/test'
+import Mymusic from '../components/mime/index'
+import Friends from '../components/friends'
+import Account from '../components/account'
+
 import {
     BrowserRouter as Router,
-    Route,
+    Route
 } from 'react-router-dom'
 
 
@@ -29,6 +33,9 @@ const Basic = () => (
         <div>
             <Route exact path="/" component={DiscoveryMusic}/>
             <Route exact path="/hoc" component={Out}/>
+            <Route exact path="/mymusic" component={Mymusic}/>
+            <Route exact path="/friends" component={Friends}/>
+            <Route exact path="/account" component={Account}/>
             <Tabbar/>
         </div>
     </Router>
